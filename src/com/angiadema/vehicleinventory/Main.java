@@ -77,14 +77,10 @@ public class Main {
 				// Store car details in an array.
 				String[] carInfo = car.listVehicleInfo();
 				
-				// Declare the FileOutputStream and PrintWriter variables
-				FileOutputStream outputStream = null;
-				PrintWriter outputFileStream = null;
-				
-				// Create FileOutputStream and PrintWriter objects and print to file destination
-				try {
-					outputStream = new FileOutputStream("C:\\Temp\\Autos.txt");
-					outputFileStream = new PrintWriter(outputStream);
+				// Use try with resources to create FileOutputStream and PrintWriter objects auto close resources
+				try (FileOutputStream outputStream = new FileOutputStream("C:\\Temp\\Autos.txt");
+					 PrintWriter outputFileStream = new PrintWriter(outputStream)) {
+
 					
 					// Loop through the array of car details and write to file
 					for (int i = 0; i < carInfo.length; i++) {
@@ -98,11 +94,6 @@ public class Main {
 					
 					System.out.println("Could not write vehicle info to file, please try again");
 				
-				// Ensure resources closed after opened
-				} finally {
-					if (outputFileStream != null) {
-						outputFileStream.close();
-					}
 				}	
 			
 			// Handle second option of user input
