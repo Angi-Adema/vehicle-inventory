@@ -11,7 +11,7 @@ public class Main {
 			
 			System.out.println("Vehicle Information: ");
 			
-			// Get the array of car info
+			// Get all car details
 			String[] vehicleInfo = car.listVehicleInfo();
 			
 			// Loop through the array
@@ -33,8 +33,31 @@ public class Main {
 			String addNewCar = car.addNewVehicle("Acura", "MDX A-Spec", "Double Apex Blue Pearl", 2026, 5);
 			System.out.println(addNewCar);
 			
+			// 5. Get all new car details, print those details, update the car info and print the update
+			String[] newVehicleInfo = car.listVehicleInfo();
+			
+			// Loop through the array
+			for (int i = 0; i < newVehicleInfo.length; i++) {
+				System.out.println(newVehicleInfo[i]);
+			}
+			
 			// Create empty line between print messages
 			System.out.println();
+			
+			String updateVehicle = car.updateVehicle("Acura", "MDX Type S", "Black", 2026, 5);
+			System.out.println(updateVehicle);
+			
+			String[] updatedVehicleInfo = car.listVehicleInfo();
+			
+			// Loop through the array
+			for (int i = 0; i < updatedVehicleInfo.length; i++) {
+				System.out.println(updatedVehicleInfo[i]);
+			}
+			
+			// Create empty line between print messages
+			System.out.println();
+			
+			// 6. Ask user if they would like to print car info to a file
 			
 			
 			
