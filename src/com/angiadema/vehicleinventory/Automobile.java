@@ -9,13 +9,10 @@ public class Automobile {
 	private int year;
 	private int mileage;
 	
-	// Default constructor
+	// Default constructor, do not have to list out all variables as they automatically 
+	// default to the values that would be entered.
 	public Automobile() {
-		this.make = "";
-		this.model = "";
-		this.color = "";
-		this.year = 0;
-		this.mileage = 0;
+
 	}
 	
 	// Parameterized constructor
