@@ -26,6 +26,18 @@ public class Main {
 			String removeCar = car.removeVehicle();
 			System.out.println(removeCar);
 			
+			// Create empty line between print messages
+			System.out.println();
+			
+			// 4. Add a new vehicle
+			String addNewCar = car.addNewVehicle("Acura", "MDX A-Spec", "Double Apex Blue Pearl", 2026, 5);
+			System.out.println(addNewCar);
+			
+			// Create empty line between print messages
+			System.out.println();
+			
+			
+			
 		} catch (Exception e) {
 			System.out.println("Error printing vehicle information, please try again.");
 		}
