@@ -72,8 +72,19 @@ public class Automobile {
 			return "Unable to remove vehicle, please try again.";
 		}
 	}
-			
-		
 	
+	// Update a vehicle in inventory
+	public String updateVehicle(String make, String model, String color, int year, int mileage) {
+		try {
+			this.make = make;
+			this.model = model;
+			this.color = color;
+			this.year = year;
+			this.mileage = mileage;
+			return "Update to vehicle information was successful.";
+		} catch (Exception e) {
+			return "Could not update the vehicle information, please try again.";
+		}
+	}
 
 }
